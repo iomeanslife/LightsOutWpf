@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightsOutWpf", "LightsOutWpf\LightsOutWpf.csproj", "{2D626FE5-0A54-480D-97C9-99AB8173088F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightsOutWpf.Tests", "LightsOutWpf.Tests\LightsOutWpf.Tests.csproj", "{1ADA93F1-00DE-4DBC-9769-E05EBBCE7988}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightsOutWpf.Shared", "LightsOutWpf.Shared\LightsOutWpf.Shared.csproj", "{02462F69-A879-4533-91BD-C92D664B74A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2D626FE5-0A54-480D-97C9-99AB8173088F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D626FE5-0A54-480D-97C9-99AB8173088F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D626FE5-0A54-480D-97C9-99AB8173088F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ADA93F1-00DE-4DBC-9769-E05EBBCE7988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ADA93F1-00DE-4DBC-9769-E05EBBCE7988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ADA93F1-00DE-4DBC-9769-E05EBBCE7988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ADA93F1-00DE-4DBC-9769-E05EBBCE7988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02462F69-A879-4533-91BD-C92D664B74A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02462F69-A879-4533-91BD-C92D664B74A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02462F69-A879-4533-91BD-C92D664B74A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02462F69-A879-4533-91BD-C92D664B74A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

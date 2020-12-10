@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LightsOutWpf.Shared;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,15 @@ namespace LightsOutWpf
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class GameWindow : Window
     {
-        public MainWindow()
+        private readonly IGameFieldService gameFieldService;
+
+        public GameWindow(IGameFieldService gameFieldService)
         {
             InitializeComponent();
+
+            this.gameFieldService = gameFieldService;
         }
     }
 }
