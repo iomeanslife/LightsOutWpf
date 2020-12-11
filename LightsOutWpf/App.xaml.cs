@@ -1,4 +1,5 @@
-﻿using LightsOutWpf.Shared;
+﻿using LightsOutWpf.Shared.Services;
+
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -23,22 +24,15 @@ namespace LightsOutWpf
         {
             base.OnStartup(e);
 
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory());
             var serviceCollection = new ServiceCollection();
-            ConfigurationServices(serviceCollection);
+            serviceCollection.AddOptions();
+            serviceCollection.AddScoped<IGameFieldService, GameFieldService>();
+            serviceCollection.AddTransient<GameWindow>();
+
             ServiceProvider = serviceCollection.BuildServiceProvider();
             var gameWindow = ServiceProvider.GetRequiredService<GameWindow>();
 
             gameWindow.Show();
-        }
-
-        private void ConfigurationServices(IServiceCollection services)
-        {
-            services.AddOptions();
-            services.AddScoped<IGameFieldService,GameFieldService>();
-            services.AddTransient< GameWindow>();
-            
         }
     }
 }

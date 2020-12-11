@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LightsOutWpf"
+        xmlns:sharedServices="clr-namespace:LightsOutWpf.Shared.Services;assembly=LightsOutWpf.Shared"
         mc:Ignorable="d"
         Height="450" Width="800"
-        Title="Lights Out!">
+        Title="Lights Out!"               
+        >
+    <Window.DataContext>
+        <sharedServices:MockGameFieldService/>
+    </Window.DataContext>
     <Grid>
         <Grid x:Name="GameFieldGrid">
             <Grid.ColumnDefinitions>
@@ -24,12 +29,35 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="Light_0_0_Button" Grid.Column="0" Grid.Row="0"/>
-            <Button x:Name="Light_1_0_Button" Grid.Column="1" Grid.Row="0"/>
-            <Button x:Name="Light_2_0_Button" Grid.Column="2" Grid.Row="0"/>
-            <Button x:Name="Light_3_0_Button" Grid.Column="3" Grid.Row="0"/>
-            <Button x:Name="Light_4_0_Button" Grid.Column="4" Grid.Row="0"/>
-
+            <Button x:Name="Light_0_0_Button" Grid.Column="0" Grid.Row="0" DataContext="{Binding Lights[0]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_1_0_Button" Grid.Column="1" Grid.Row="0" DataContext="{Binding Lights[1]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_2_0_Button" Grid.Column="2" Grid.Row="0" DataContext="{Binding Lights[2]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_3_0_Button" Grid.Column="3" Grid.Row="0" DataContext="{Binding Lights[3]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_4_0_Button" Grid.Column="4" Grid.Row="0" DataContext="{Binding Lights[4]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+                                                                                                                                                                           
+            <Button x:Name="Light_0_1_Button" Grid.Column="0" Grid.Row="1" DataContext="{Binding Lights[5]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_1_1_Button" Grid.Column="1" Grid.Row="1" DataContext="{Binding Lights[6]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_2_1_Button" Grid.Column="2" Grid.Row="1" DataContext="{Binding Lights[7]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_3_1_Button" Grid.Column="3" Grid.Row="1" DataContext="{Binding Lights[8]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_4_1_Button" Grid.Column="4" Grid.Row="1" DataContext="{Binding Lights[9]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+                                                                                                                                     
+            <Button x:Name="Light_0_2_Button" Grid.Column="0" Grid.Row="2" DataContext="{Binding Lights[10]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_1_2_Button" Grid.Column="1" Grid.Row="2" DataContext="{Binding Lights[11]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_2_2_Button" Grid.Column="2" Grid.Row="2" DataContext="{Binding Lights[12]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_3_2_Button" Grid.Column="3" Grid.Row="2" DataContext="{Binding Lights[13]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_4_2_Button" Grid.Column="4" Grid.Row="2" DataContext="{Binding Lights[14]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+                                                                                                                                     
+            <Button x:Name="Light_0_3_Button" Grid.Column="0" Grid.Row="3" DataContext="{Binding Lights[15]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_1_3_Button" Grid.Column="1" Grid.Row="3" DataContext="{Binding Lights[16]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_2_3_Button" Grid.Column="2" Grid.Row="3" DataContext="{Binding Lights[17]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_3_3_Button" Grid.Column="3" Grid.Row="3" DataContext="{Binding Lights[18]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_4_3_Button" Grid.Column="4" Grid.Row="3" DataContext="{Binding Lights[19]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+                                                                                                                                     
+            <Button x:Name="Light_0_4_Button" Grid.Column="0" Grid.Row="4" DataContext="{Binding Lights[20]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_1_4_Button" Grid.Column="1" Grid.Row="4" DataContext="{Binding Lights[21]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_2_4_Button" Grid.Column="2" Grid.Row="4" DataContext="{Binding Lights[22]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_3_4_Button" Grid.Column="3" Grid.Row="4" DataContext="{Binding Lights[23]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
+            <Button x:Name="Light_4_4_Button" Grid.Column="4" Grid.Row="4" DataContext="{Binding Lights[24]}" Content="{Binding Lit, Mode=TwoWay}" Command="{Binding LightPressedCommand}"/>
         </Grid>
     </Grid>
 </Window>
