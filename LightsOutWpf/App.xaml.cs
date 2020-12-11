@@ -24,15 +24,30 @@ namespace LightsOutWpf
         {
             base.OnStartup(e);
 
+            // IoC code.
             var serviceCollection = new ServiceCollection();
             serviceCollection.AddOptions();
             serviceCollection.AddScoped<IGameFieldService, GameFieldService>();
             serviceCollection.AddTransient<GameWindow>();
 
             ServiceProvider = serviceCollection.BuildServiceProvider();
+
+            var gameFieldService = ServiceProvider.GetRequiredService<IGameFieldService>();
+            gameFieldService.PlayerWins += GameFieldService_PlayerWins;
+
             var gameWindow = ServiceProvider.GetRequiredService<GameWindow>();
 
             gameWindow.Show();
+        }
+
+        private void GameFieldService_PlayerWins(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Play again?", "You win!", MessageBoxButton.YesNo);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                ((IGameFieldService) sender).SetupGameField();
+            }
         }
     }
 }

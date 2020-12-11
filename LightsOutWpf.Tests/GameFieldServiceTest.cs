@@ -17,7 +17,7 @@ namespace LightsOutWpf.Tests
         [Fact]
         public void TranslateCoordinatesTest()
         {
-            var position = GameFieldService.TranslateCoordinates(4,4,5);
+            var position = GameFieldService.TranslateCoordinates((4,4),5);
             Assert.Equal(24, position);
         }
 

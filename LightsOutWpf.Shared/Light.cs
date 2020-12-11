@@ -40,7 +40,6 @@ namespace LightsOutWpf.Shared
             ,
                 ExecuteDelegate = (param) =>
                 {
-                    Lit = !Lit;
                     gameFieldService.FlipLights(this);
                 }
             };

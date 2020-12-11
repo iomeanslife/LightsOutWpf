@@ -20,7 +20,19 @@ namespace LightsOutWpf.Shared.Services
             }
         }
 
+        public event EventHandler PlayerWins;
+
+        protected virtual void OnPlayerWins()
+        {
+            PlayerWins?.Invoke(this, new EventArgs());
+        }
+
         public void FlipLights(Light light)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetupGameField()
         {
             throw new NotImplementedException();
         }
